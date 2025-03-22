@@ -222,7 +222,3 @@ Implementação de scripts de migração e validação para garantir consistênc
 Este aplicativo de leitura oferece uma experiência rica ao usuário com funcionalidades robustas de anotações e favoritos, combinando uma arquitetura moderna com React Native e integração eficiente com Supabase. O sistema de funcionamento offline e sincronização garante que os usuários possam usar o aplicativo em qualquer situação, mesmo sem conectividade constante.
 
 A arquitetura implementada prioriza a experiência do usuário, a performance e a estabilidade, com soluções específicas para problemas conhecidos em aplicativos React Native.
-
----
-
-**Sobre este README**: Esta documentação foi gerada através da análise dos arquivos do projeto, focando nas implementações e padrões de código mais relevantes. Para informações mais detalhadas, consulte os comentários no código-fonte e a documentação das bibliotecas utilizadas. 
