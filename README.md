@@ -1,17 +1,102 @@
-# Aplicativo de Leitura - Documentação
+<div align="center">
+  
+  # 📖 NOXUS
+  
+  **App avançado de leitura com sistema de anotações offline-first**
+  
+  *Arquitetura robusta para leitura inteligente, anotações categorizadas e sincronização offline*
+  
+  [![React Native](https://img.shields.io/badge/React%20Native-Latest-blue.svg)](https://reactnative.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue.svg)](https://www.typescriptlang.org/)
+  [![Expo Router](https://img.shields.io/badge/Expo%20Router-Latest-black.svg)](https://expo.dev/)
+  [![Supabase](https://img.shields.io/badge/Supabase-Backend-green.svg)](https://supabase.com/)
+  [![Offline First](https://img.shields.io/badge/Offline-First-orange.svg)](#)
+  [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+  
+  [📱 Demo](#-demonstração) • [⚡ Instalação](#-instalação-rápida) • [🏠 Arquitetura](#-arquitetura) • [🔄 Sync](#-sincronização-offline)
+  
+</div>
 
-## 📱 Visão Geral
+---
 
-Este é um aplicativo de leitura mobile desenvolvido com React Native e Expo, que permite aos usuários ler livros, fazer anotações e gerenciar favoritos. O aplicativo possui recursos de funcionamento offline, sincronização com o backend Supabase, e fluxos de autenticação.
+## 🎯 Características Principais
 
-## 🔧 Tecnologias e Dependências
+<table>
+  <tr>
+    <td>🔄</td>
+    <td><strong>Offline-First</strong></td>
+    <td>Sistema robusto de sincronização com fila de operações pendentes</td>
+  </tr>
+  <tr>
+    <td>📝</td>
+    <td><strong>Anotações Avançadas</strong></td>
+    <td>Categorização, cores, posições e busca inteligente</td>
+  </tr>
+  <tr>
+    <td>🏠</td>
+    <td><strong>Arquitetura Moderna</strong></td>
+    <td>Expo Router, Context API e gerenciamento de estado avançado</td>
+  </tr>
+  <tr>
+    <td>🔐</td>
+    <td><strong>Autenticação Segura</strong></td>
+    <td>Supabase Auth com RLS e JWT tokens</td>
+  </tr>
+  <tr>
+    <td>📈</td>
+    <td><strong>Performance</strong></td>
+    <td>Inicialização otimizada e gerenciamento de memória</td>
+  </tr>
+  <tr>
+    <td>🛠️</td>
+    <td><strong>Developer Experience</strong></td>
+    <td>TypeScript, validação de schema e debug tools</td>
+  </tr>
+</table>
 
-- **Framework**: React Native com Expo Router
-- **Backend**: Supabase (PostgreSQL + API REST)
-- **Gerenciamento de Estado**: Context API do React
-- **Armazenamento Local**: AsyncStorage
-- **Detecção de Rede**: NetInfo
-- **TypeScript**: Para tipagem estática
+## 📱 Demonstração
+
+> **Nota:** Screenshots e demo em vídeo serão adicionados em breve!
+
+## 🚀 Visão Geral
+
+Noxus é um aplicativo de leitura mobile desenvolvido com React Native e Expo, que permite aos usuários ler livros, fazer anotações e gerenciar favoritos. O aplicativo possui recursos de funcionamento offline, sincronização com o backend Supabase, e fluxos de autenticação.
+
+## 🚀 Stack Tecnológico
+
+### 📱 Frontend & Arquitetura
+```
+📱 React Native           - Framework mobile multiplataforma
+🛣️ Expo Router             - Roteamento baseado em arquivos
+🔷 TypeScript             - Tipagem estática e segurança
+🧩 Context API             - Gerenciamento de estado reativo
+💫 Expo                    - Plataforma de desenvolvimento
+```
+
+### 💾 Backend & Dados
+```
+🔋 Supabase                - Backend-as-a-Service
+🔐 Supabase Auth          - Autenticação JWT
+💾 PostgreSQL             - Banco relacional
+📏 AsyncStorage           - Persistência local
+🌐 NetInfo                 - Detecção de conectividade
+```
+
+### 🔄 Sincronização & Offline
+```
+📋 AsyncStorage Queue     - Fila de operações pendentes
+🔄 Auto Sync               - Sincronização automática
+🔌 Offline Detection      - Monitoramento de conectividade
+📦 Data Persistence       - Armazenamento local robusto
+```
+
+### 🛠️ DevOps & Qualidade
+```
+🧩 Schema Validation      - Validação de banco de dados
+🐛 Debug Tools             - Ferramentas de debug
+📄 Migration Scripts       - Scripts de migração SQL
+📊 Performance Monitor     - Monitoramento de performance
+```
 
 ## 📂 Estrutura do Projeto
 
@@ -40,31 +125,82 @@ project/
 └── tsconfig.json             # Configuração do TypeScript
 ```
 
-## 🌟 Funcionalidades Principais
+## 📚 Funcionalidades Principais
 
-### 1. Sistema de Autenticação
-- Login e registro de usuários
-- Gerenciamento de sessão via Supabase Auth
+### 🔐 Sistema de Autenticação Segura
+- ✓ Login/registro com email e senha
+- ✓ Sessão persistente com Supabase Auth
+- ✓ Recuperação de senha
+- ✓ Logout seguro
 
-### 2. Gerenciamento de Anotações
-- Criar, atualizar e excluir anotações para livros
-- Categorizar anotações (Importante, Dúvida, Revisão, etc.)
-- Colorir anotações para organização visual
-- Sincronização automática quando o dispositivo está online
-- Armazenamento local quando offline
+### 📝 Sistema de Anotações Avançadas
+- ✓ **CRUD Completo** - Criar, ler, atualizar e deletar anotações
+- ✓ **Categorização** - Importante, Dúvida, Revisão, Ideia, etc.
+- ✓ **Sistema de Cores** - Organização visual por cores
+- ✓ **Posições Precisas** - Anotações vinculadas a posições específicas
+- ✓ **Busca e Filtros** - Encontre anotações por categoria ou conteúdo
+- ✓ **Export/Import** - Backup e restauração de anotações
 
-### 3. Favoritos
-- Marcar livros como favoritos
-- Visualizar lista de livros favoritos
+### ❤️ Sistema de Favoritos
+- ✓ Marcar/desmarcar livros favoritos
+- ✓ Lista organizada de favoritos
+- ✓ Acesso rápido aos livros preferidos
+- ✓ Sincronização entre dispositivos
 
-### 4. Leitor de Livros
-- Interface para leitura de livros por capítulos
-- Suporte a diferentes tipos de conteúdo (ebooks, light novels, mangás)
+### 📱 Leitor Multiplataforma
+- ✓ **Interface Intuitiva** - Leitura por capítulos
+- ✓ **Multi-formato** - Ebooks, light novels, mangás
+- ✓ **Navegação Rápida** - Entre capítulos e livros
+- ✓ **Modo Escuro/Claro** - Conforto visual
 
-### 5. Funcionamento Offline
-- Operações CRUD em anotações quando offline
-- Fila de sincronização para operações pendentes
-- Sincronização automática quando o dispositivo fica online
+### 🔄 Funcionalidade Offline-First
+- ✓ **Operações Offline** - CRUD completo sem internet
+- ✓ **Fila de Sincronização** - Operações pendentes organizadas
+- ✓ **Auto-Sync** - Sincronização automática ao conectar
+- ✓ **Conflict Resolution** - Resolução inteligente de conflitos
+- ✓ **Status Indicators** - Indicadores visuais de status de sync
+
+## ⚡ Instalação Rápida
+
+```bash
+# Clone o repositório
+git clone https://github.com/ademisson-Auto/Noxus.git
+cd Noxus
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o .env com suas credenciais do Supabase
+
+# Inicie o projeto
+npx expo start
+```
+
+### 📝 Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+- Expo CLI global: `npm install -g @expo/cli`
+- Conta no [Supabase](https://supabase.com) (gratuita)
+- Expo Go app no seu dispositivo (para testes)
+
+### 🚀 Comandos de Desenvolvimento
+
+```bash
+# Executar no Android
+npx expo run:android
+
+# Executar no iOS  
+npx expo run:ios
+
+# Executar na Web
+npx expo start --web
+
+# Limpar cache
+npx expo start --clear
+```
 
 ## 🔄 Contextos e Gerenciamento de Estado
 
@@ -217,8 +353,78 @@ Implementação de scripts de migração e validação para garantir consistênc
 - Sugestões de correção com scripts SQL automáticos
 - Logs detalhados para diagnóstico
 
-## 📝 Conclusão
+## 🛣️ Roadmap
 
-Este aplicativo de leitura oferece uma experiência rica ao usuário com funcionalidades robustas de anotações e favoritos, combinando uma arquitetura moderna com React Native e integração eficiente com Supabase. O sistema de funcionamento offline e sincronização garante que os usuários possam usar o aplicativo em qualquer situação, mesmo sem conectividade constante.
+### 🕰️ Próximas Atualizações
 
-A arquitetura implementada prioriza a experiência do usuário, a performance e a estabilidade, com soluções específicas para problemas conhecidos em aplicativos React Native.
+- [ ] 📸 **Screenshots & Demo** - Adicionar imagens e vídeo demonstrativo
+- [ ] 📊 **Dashboard de Analytics** - Estatísticas de leitura e anotações
+- [ ] 🔍 **Busca Global** - Busca avançada em todo o conteúdo
+- [ ] 📄 **Export Avançado** - PDF, Markdown, Notion
+- [ ] 🔔 **Notificações** - Lembretes de leitura e metas
+- [ ] 🎙️ **Notas de Voz** - Anotações em áudio
+
+### 💡 Ideias Futuras
+
+- 🤖 **IA Reading Assistant** - Sugestões inteligentes de anotações
+- 👥 **Social Reading** - Compartilhamento e discussões
+- 🎨 **Temas Personalizados** - Interface totalmente customizável
+- ☁️ **Multi-device Sync** - Sincronização em tempo real
+- 📚 **Library Management** - Organização avançada de biblioteca
+
+## 🤝 Como Contribuir
+
+Contribuições são muito bem-vindas! Este projeto prioriza qualidade de código e experiência do desenvolvedor.
+
+### 🐛 Reportar Bugs
+1. Verifique se o bug já foi reportado nas [Issues](https://github.com/ademisson-Auto/Noxus/issues)
+2. Crie uma nova issue com:
+   - Descrição detalhada do problema
+   - Passos para reproduzir
+   - Screenshots ou vídeos
+   - Logs relevantes
+   - Informações do dispositivo
+
+### ✨ Sugerir Melhorias
+1. Abra uma issue com o label `enhancement`
+2. Descreva a funcionalidade proposta
+3. Explique o caso de uso
+4. Sugira implementação se possível
+
+### 📝 Contribuir com Código
+1. Faça um fork do projeto
+2. Crie uma branch: `git checkout -b feature/nova-funcionalidade`
+3. Siga os padrões de código (TypeScript, ESLint)
+4. Implemente testes quando aplicável
+5. Commit com mensagens descritivas
+6. Push para a branch: `git push origin feature/nova-funcionalidade`
+7. Abra um Pull Request
+
+### 🧩 Diretrizes Técnicas
+
+- **TypeScript**: Tipagem forte obrigatória
+- **Padrões**: Siga os padrões existentes do projeto
+- **Performance**: Considere impacto na performance
+- **Offline-First**: Mantenha compatibilidade offline
+- **Testes**: Adicione testes para novas funcionalidades
+
+## 📋 Licença
+
+Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
+<div align="center">
+  
+  **📖 Noxus - Leitura inteligente com anotações avançadas**
+  
+  *Arquitetura offline-first para uma experiência de leitura superior*
+  
+  Desenvolvido com ❤️ por [Ademisson](https://github.com/ademisson-Auto)
+  
+  [![GitHub](https://img.shields.io/badge/GitHub-ademisson--Auto-black?logo=github)](https://github.com/ademisson-Auto)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/ademisson)
+  
+  **Se este projeto te inspirou, deixe uma ⭐!**
+  
+</div>
